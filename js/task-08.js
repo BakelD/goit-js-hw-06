@@ -5,17 +5,17 @@ const passwordEl = formEl.querySelector('[name="password"]');
 formEl.addEventListener('submit', e => {
   e.preventDefault();
 
-  const { email, password } = e.target.elements;
+  const { email: emailValue, password: passwordValue } = e.target.elements;
 
-  const emailValue = email.value;
-  const passwordValue = password.value;
+  const email = emailValue.value;
+  const password = passwordValue.value;
 
-  if (!emailValue || !passwordValue) {
+  if (!email || !password) {
     alert('all fields must be filled in');
     return;
   }
 
-  displayData({ emailValue, passwordValue });
+  displayData({ email, password });
 
   emailEl.value = '';
   passwordEl.value = '';
