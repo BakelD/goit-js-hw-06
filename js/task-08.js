@@ -20,7 +20,5 @@ formEl.addEventListener('submit', e => {
 });
 
 function displayData(obj) {
-  for (const prop in obj) {
-    console.log(`${prop} -> ${obj[prop]}`);
-  }
+  console.log(obj);
 }
