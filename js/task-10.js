@@ -7,9 +7,10 @@ const createBtnEl = document.querySelector('#controls [data-create]');
 const destroyBtnEl = document.querySelector('#controls [data-destroy]');
 const boxesEl = document.querySelector('#boxes');
 
+let size = 30;
+
 function createBoxes(amount) {
   const arrBoxes = [];
-  let size = 30;
 
   for (let i = 0; i < amount; i += 1) {
     const box = document.createElement('div');
